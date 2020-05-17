@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Hero.scss";
 import propTypes from "prop-types";
-
+import ReactHtmlParser from 'react-html-parser';
 
  const Hero = props => (
 
@@ -11,7 +11,7 @@ import propTypes from "prop-types";
       className={styles.image}
       src={props.ImageLink}
     />
-    <h2 className={styles.title}>{props.titleText}</h2>
+    <h2 className={styles.title}>{ReactHtmlParser(props.titleText)}</h2>
   </header>
 );
 
