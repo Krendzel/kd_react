@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Hero.scss";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 
 
  const Hero = props => (
@@ -15,9 +15,9 @@ import PropTypes from "prop-types";
   </header>
 );
 
-Hero.PropTypes = {
-    titleText: PropTypes.node.isRequired,
-    ImageLink: PropTypes.string.isRequired,
+Hero.propTypes = {
+    titleText: propTypes.node.isRequired,
+    ImageLink: propTypes.string.isRequired,
 };
 
 export default Hero;
