@@ -8,7 +8,7 @@ import ReactHtmlParser from 'react-html-parser';
 
   <header className={styles.component}>
     <img
-      className={styles.image}
+      className={styles.image} 
       src={props.ImageLink}
     />
     <h2 className={styles.title}>{ReactHtmlParser(props.titleText)}</h2>
