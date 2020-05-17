@@ -4,13 +4,13 @@ import PropTypes from "prop-types";
 
 class Column extends React.Component {
   static propTypes = {
-    children: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
   };
 
   render() {
     return (
       <section className={styles.component}>
-        <h3 className={styles.title}>{this.props.children}</h3>
+        <h3 className={styles.title}>{this.props.title}</h3>
       </section>
     );
   }

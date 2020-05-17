@@ -6,6 +6,9 @@ import Column from "../Column/Column";
 import {settings} from '../../data/dataStore';
 import ReactHtmlParser from 'react-html-parser';
 class List extends React.Component {
+  state = {
+      columns: this.props.columns || [],
+  }  
   static propTypes = {
     title: PropTypes.node.isRequired,
     image: PropTypes.string.isRequired,
@@ -22,9 +25,12 @@ class List extends React.Component {
         <Hero titleText={this.props.title} ImageLink={this.props.image} />
         <div className={styles.description}>{ReactHtmlParser(this.props.description)}</div>
         <div className={styles.columns}>
-          <Column>Hello</Column>
-          <Column>Hello</Column>
-          <Column>Hello</Column>
+        {this.state.columns.map(({key, ...columnProps}) => (
+            <Column key={key}{...columnProps} />
+        )
+        )}
+          
+          
         </div>
       </section>
     );
